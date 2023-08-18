@@ -6,6 +6,9 @@
       {
         "path": "./src"
       },
+      {
+        "path": "./src/components"
+      },
     ],
     "settings": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
