@@ -1,5 +1,6 @@
 import React from 'react'
 import { TaskType } from '../Task'
+import { v4 as uuidv4 } from 'uuid'
 
 interface TaskAddInputProps {
   inputText: string
@@ -16,16 +17,21 @@ const TaskAddInput = ({
 }: TaskAddInputProps) => {
   const handleSubmit = (e: any) => {
     e.preventDefault()
+
     // カードを追加する
+    const taskId = uuidv4()
     if (inputText.trim().length > 0) {
       setTaskList([
         ...taskList,
         {
-          id: taskList.length,
+          // id: taskList.length, // アンチパターン。長さが可変なので、idが重複しがち
+          id: taskId,
           text: inputText,
+          draggableId: `task-${taskId}`,
         },
       ])
     }
+    console.log(taskList)
 
     // エンター押したら、inputTextは空にする（連続してタスクを追加しやすくするため）
     setInputText('')

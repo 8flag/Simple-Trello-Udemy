@@ -39,6 +39,7 @@ const TaskCardTitle = () => {
       ) : (
         <h3>{inputCardTitle}</h3>
       )}
+      {/* <button className="taskCard">x</button> */}
     </div>
   )
 }
