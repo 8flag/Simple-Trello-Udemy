@@ -19,7 +19,7 @@ header {
 }
 
 .app {
-  background: url(../src/images/space.jpg);
+  /* background: url(../src/images/space.jpg); */
   height: 100vh;
   background-repeat: no-repeat;
 }
@@ -112,4 +112,11 @@ header {
   cursor: pointer;
   font-size: 16px;
   color: rgb(158, 46, 46);
+}
+
+.playground-taskCard {
+  width: 250px;
+  padding: 10px 25px;
+  margin: 10px 1%;
+  background-color: black;
 }
